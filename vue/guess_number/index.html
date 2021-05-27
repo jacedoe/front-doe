@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+    
+        <div id="app">
+            <p>{{ secret }}</p>
+            <input v-model="message">
+            <button v-on:click="endevina">Adivina el número</button>
+            <h1 v-if="message != 0">Fallaste!</h1>
+        </div>
+            
+        <script src="index.js"></script>
+    </body>
+</html>
