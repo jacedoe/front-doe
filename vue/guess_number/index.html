@@ -1,15 +1,21 @@
-<html>
+<html lang="es">
     <head>
+        <meta charset="utf-8" />
+        <title>Guess Number Vue</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="index.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
     
-        <div id="app">
-            <p>{{ secret }}</p>
-            <input v-model="message">
-            <button v-on:click="endevina">Adivina el número</button>
-            <h1 v-if="message != 0">Fallaste!</h1>
+        <div id="app" class="main">
+            <h1>Adivina el número secreto</h1>
+            <input type="number" placeholder="Introduzca un número" v-model="message">
+            
+            <h1 v-if="message == 0">Inserte un número del 1 al 100!</h1>
+            <h1 style="color: red;" v-else-if="message < secret">El número secreto es mayor!</h1>
+            <h1 style="color: blueviolet;" v-else-if="message > secret">El número secretos es menor!</h1>
+            <h1 v-else>Enhorabuena, acertaste!</h1>
         </div>
             
         <script src="index.js"></script>
