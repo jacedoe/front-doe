@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vue App</title>
+	<!-- versión de desarrollo, incluye advertencias de ayuda en la consola -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="root" class="container">
+    <h1></h1>
+    <h2>Abra su cuenta o identifíquese</h2>
+    <h3>Ingrese su nombre y apellido</h3>
+    <input v-model="nom" placeholder="Ingrese su nombre" :class="[nom.length < 2 ? 'red' : 'green']" class="form-control">
+    <br>
+    <input v-model="cognom" placeholder="Ingrese su primer apellido" :class="[nom.length < 2 ? 'red' : 'green']" class="form-control">
+    <br>
+     
+    <button v-on:click="crearCompte" onclick="alert('Se han enviado los datos')" :disabled="nom.length < 2">Enviar</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
+
