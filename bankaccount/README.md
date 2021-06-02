@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-</head>
-
-<body>
-    <br>
-    <a href="../index.html">INDEX</a>
-    <br>
-    <p>En el següent exercici el nostre client és una entitat bancària. El banc vol que un client pugui donar d’alta, de
+    # BankAccount Example
+    ## Una aproximación a la programación orientada a objetos en JavaScript
+    #### Ejercicio realizado durante el curso Fonaments de la programació de la IT Academy Barcelonactiva
+    
+    En el següent exercici el nostre client és una entitat bancària. El banc vol que un client pugui donar d’alta, de
         baixa, veure informació o fer certes operacions en un compte corrent. Per fer-ho necessitem una classe Compte
         que tindrà el camp Titular (nom + cognom), saldo, nombre de compte i el nombre de transaccions realitzades. Els
         mètodes de la classe són: ingresar euros, retirar euros, retornar saldo, veure transaccions, veure compte.
@@ -26,7 +14,7 @@
         Per donar d’alta un compte, el client ha d’omplir les següents dades: nom, cognom i nombre de compte. Quan es
         crea un compte, la qüantitat sempre és 50€ i el nombre de transaccions és 0</p>
 
-    <p>Abans de crear el compte, hem d’estar segurs que no hi ha cap compte que tingui el mateix titular i el mateix
+    Abans de crear el compte, hem d’estar segurs que no hi ha cap compte que tingui el mateix titular i el mateix
         nombre de compte. Si un titular ja té aquest nombre de compte, hem d’informar a l’usuari dient-li que el compte
         no es crearà perquè ja té un compte amb aquest nombre i li mostrarem totes les dades d’aquest compte.
 
@@ -42,25 +30,4 @@
         que vol operar i llavors ha de poder ingresar, retirar, veure transaccions i veure compte. Si el compte no
         existeix, s’ha d’informar a l’usuari de que el compte amb el que vol operar no existeix i se li han de mostrar
         tots els seus comptes.
-    </p>
-
-    <input type="button" onclick="crearCompte()" value="Crear cuenta" />
-    <input type="button" onclick="donardeBaixa()" value="Dar de baja una cuenta" />
-    <div>
-        <h2>Area clientes</h2>
-        <h3>Identifíquese</h3>
-        <input id="myInput1" type="text" placeholder="Nombre">
-        <input id="myInput2" type="text" placeholder="Apellido">
-        <input id="myInput3" type="text" placeholder="Número de cuenta"><br>
-        <input type="button" onclick="veureDetall()" value="Detalle de su cuenta" /><br>
-
-        <p>"Para operar con su cuenta: 1 para ingresos, 2 para retirar efectivo, 3 para ver su saldo, 4 para ver el
-            número de transacciones, 5 para ver el número de cuenta "</p>
-        <input type="button" onclick="operativa()" value="Opere con su cuenta" />
-        <input id="switcher" type="number">
-    </div>
-    <script src="compte.js"></script>
-    <script src="app.js"></script>
-</body>
-
-</html>
+    

@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Vue App</title>
-	<!-- versión de desarrollo, incluye advertencias de ayuda en la consola -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-</head>
-<body>
-  <div id="root" class="container">
-    <h1></h1>
-    <h2>Abra su cuenta o identifíquese</h2>
-    <h3>Ingrese su nombre y apellido</h3>
-    <input v-model="nom" placeholder="Ingrese su nombre" :class="[nom.length < 2 ? 'red' : 'green']" class="form-control">
-    <br>
-    <input v-model="cognom" placeholder="Ingrese su primer apellido" :class="[nom.length < 2 ? 'red' : 'green']" class="form-control">
-    <br>
-     
-    <button v-on:click="crearCompte" onclick="alert('Se han enviado los datos')" :disabled="nom.length < 2">Enviar</button>
-  </div>
-  <script src="index.js"></script>
-</body>
-</html>
 
+<head>
+    <meta charset="utf-8">
+    <meta lang="es">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BankAccount</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <input type="button" onclick="crearCompte()" value="Crear cuenta" class="form-control"/>
+    <input type="button" onclick="donardeBaixa()" value="Dar de baja una cuenta" class="form-control"/>
+    <div>
+        <h2>Area clientes</h2>
+        <h3>Identifíquese</h3>
+        <input id="myInput1" type="text" placeholder="Nombre">
+        <input id="myInput2" type="text" placeholder="Apellido">
+        <input id="myInput3" type="text" placeholder="Número de cuenta"><br>
+        <input type="button" onclick="veureDetall()" value="Detalle de su cuenta" /><br>
+
+        <p>"Para operar con su cuenta: 1 para ingresos, 2 para retirar efectivo, 3 para ver su saldo, 4 para ver el
+            número de transacciones, 5 para ver el número de cuenta "</p>
+        <input type="button" onclick="operativa()" value="Opere con su cuenta" />
+        <input id="switcher" type="number">
+    </div>
+    <script src="compte.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
