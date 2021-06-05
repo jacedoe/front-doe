@@ -21,7 +21,6 @@ class Helloworld extends React.Component {
     this.setState({show: false})
   }
 
-
   render() {
     if (this.state.show) {
     return (
