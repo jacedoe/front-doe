@@ -20,7 +20,8 @@
                 num1: 1,
                 num2: 1,
                 response: "",
-                score: 0
+                score: 0,
+                incorrect: false
             };
         }
 
@@ -29,16 +30,15 @@
           <div>
             <div>{this.state.num1} + {this.state.num2}</div>
             <input onKeyPress={this.inputKeyPress} onChange={this.updateResponse} value={this.state.response} />
-            <h1>Score: {this.state.score}</h1>
-            <div>{this.state.response}</div>
-            
-           
+            <div>Score: {this.state.score}</div>
+            <div>{this.state.response}</div>           
           </div>
         );
+        }
         inputKeyPress = (event) => {
                     
                     // Check if the Enter key was pressed
-                    if (event.key === 'Enter') {
+                    if (event.key === "Enter") {
                         
                         // Extract answer
                         const answer = parseInt(this.state.response);
@@ -49,17 +49,19 @@
                                 score: state.score + 1,
                                 num1: Math.ceil(Math.random() * 10),
                                 num2: Math.ceil(Math.random() * 10),
-                                response: ''
+                                response: "",
+                                incorrect: false
                             }));
                         } else {
                             this.setState(state => ({
                                 score: state.score - 1,
-                                response: ''
+                                response: "",
+                                incorrect: true
                             }));
                         }
                     }
                 }
-      }
+      
       updateResponse = (event) => {
           this.setState({
               response: event.target.value
