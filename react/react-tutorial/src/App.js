@@ -1,4 +1,6 @@
 import React from 'react';
+import Search from './components/Search';
+import axios from 'axios';
 import './App.css';
 
 // function HolaMundo(props) {
@@ -11,39 +13,25 @@ import './App.css';
 //
 
 
-class Helloworld extends React.Component {
-
-  state = {
-    show: true
-  }
-
-  toggleShow = () => {
-    this.setState({show: false})
-  }
-
+class App extends React.Component {
   render() {
-    if (this.state.show) {
     return (
-      <div id="root">
-          <h3>{this.props.subtitle}</h3>
-          {this.props.mytext}
-          <button onClick={this.toggleShow}>Cambiar estado</button>
-          </div>
-    )
-  } else {
-    return <h1>No hay nada que mostrar</h1>
-  }
+      <div>
+        <Search />
+        <Car />
+      </div>
+    );
   }
 }
 
-function App() {
-  return (
-    <div>
-      Este es mi componente:
-      <Helloworld mytext="Hola otra vez a través de props"
-      subtitle="Esto se ha escrito también con props" />
-    </div>
-  )
+class Car extends React.Component {
+  constructor() {
+    super();
+    this.state = {color: "yellow"};
+  }
+  render() {
+    return <h2>I am a {this.state.color} Car!</h2>;
+  }
 }
 
 
