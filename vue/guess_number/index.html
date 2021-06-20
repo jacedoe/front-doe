@@ -15,7 +15,7 @@
             <h1 v-if="message == 0">Inserte un número del 1 al 100!</h1>
             <h1 style="color: red;" v-else-if="message < secret">El número secreto es mayor!</h1>
             <h1 style="color: blueviolet;" v-else-if="message > secret">El número secretos es menor!</h1>
-            <h1 v-else>Enhorabuena, acertaste!</h1>
+            <h1 style="color: green" v-else>Enhorabuena, acertaste!</h1>
         </div>
             
         <script src="index.js"></script>

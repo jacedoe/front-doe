@@ -1,3 +1,4 @@
+let dni = document.getElementById("dninumber")
 function letraDni(dni)
 {
     let string="TRWAGMYFPDXBNJZSQVHLCKET";

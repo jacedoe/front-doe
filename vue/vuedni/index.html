@@ -1,0 +1,19 @@
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Vue DNI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+    
+        <div id="app" class="container">
+            <h1>Calcular la letra del DNI</h1>
+            <input type="number" placeholder="Introduzca un número" v-model="dni" class="form-control">
+            <h3>{{ letraDni }}</h3>
+        </div>
+            
+        <script src="index.js"></script>
+    </body>
+</html>
